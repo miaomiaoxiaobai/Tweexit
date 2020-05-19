@@ -1,0 +1,20 @@
+create keyspace if not exists twitter with replication={'class': 'SimpleStrategy', 'replication_factor':1};
+
+use twitter;
+
+// RAW DATA
+create table tweetsrawjson (id UUID PRIMARY KEY, tweet text);
+create table tweetsrawtext (id UUID PRIMARY KEY, tweet text);
+create table tweetsrawstream (id int PRIMARY KEY, CREATEDAT int, TEXT text, SOURCE text, TRUNCATED text, INREPLYTOSTATUSID text, INREPLYTOUSERID text, INREPLYTOSCREENNAME text, GEOLOCATION text, PLACE text, FAVORITED text, RETWEETED text, FAVORITECOUNT text, USER text, RETWEET text, CONTRIBUTORS text, RETWEETCOUNT text, RETWEETEDBYME text, CURRENTUSERRETWEETID text, POSSIBLYSENSITIVE text, LANG text, WITHHELDINCOUNTRIES text, HASHTAGENTITIES text, USERMENTIONENTITIES text, MEDIAENTITIES text, SYMBOLENTITIES text, URLENTITIES text );
+
+// DATA TABLE
+create table tweetsclean (id BIGINT PRIMARY KEY, date VARCHAR, text VARCHAR);
+
+// TRAIN DATA
+create table tweetsopen (label BIGINT PRIMARY KEY, id BIGINT, date VARCHAR, query VARCHAR, user VARCHAR, text VARCHAR);
+
+// CLASSIFIED DATA
+create table tweetsclass (id BIGINT PRIMARY KEY, date VARCHAR, text VARCHAR, class INT);
+
+// STOCK EXCHANGE DATA
+create table lse (date VARCHAR PRIMARY KEY, val DOUBLE);
