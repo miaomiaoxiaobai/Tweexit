@@ -4,7 +4,7 @@
 
 ### DESCRIPTION
 
-Natural language processing application to explore the relationships of causation between public sentiment expressed on microblogging platforms such as Twitter regarding current political issues and movements of local economy
+Natural language processing application to explore the relationships of causation between public sentiment expressed on microblogging platforms such as Twitter regarding current political issues (Brexit) and movements of local economy (London Stock Exchange opening value)
 
 ### ACHIEVEMENTS
 
