@@ -20,6 +20,6 @@ Natural language processing application to explore the relationships of causatio
 * Tweets streamed via the twitter API and filtered by keyword
 * LSE Group daily opening values scraped on [investing.com](https://in.investing.com/equities/london-stock-exchange-historical-data)
 
---
+#
 
 ###### 2019
