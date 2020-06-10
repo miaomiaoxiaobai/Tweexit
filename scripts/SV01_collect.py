@@ -41,7 +41,6 @@ def get_opening():
     )
     return opening
 
-opening = get_opening() ; print("date  : ", opening.date, "\nvalue : ", opening.value, " £")
 
 # SEND TO CASSANDRA
 
@@ -63,11 +62,12 @@ def sendtocassandra():
         session.execute(requete, timeout = None)
         print('Opening value successfully inserted in cass')
 
-sendtocassandra()
 
 if __name__ == '__main__':
-    opening = get_opening() 
+    opening = get_opening()
     sendtocassandra()
-    print(
-        "date  : ", opening.date, "\nvalue : ", opening.value, " £")
+    print("date  : ", opening.date, "\nvalue : ", opening.value, " £")
+    
+    return None
+
 # END
